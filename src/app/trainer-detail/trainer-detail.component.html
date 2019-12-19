@@ -1,0 +1,40 @@
+<div class="row" >
+<div >
+  <div *ngIf="trainer">
+    <h2>{{trainer.nome | uppercase}} DETAILS</h2>
+    <div><span>id: </span>{{trainer.id}}</div>
+    <div>
+      <label>nome:
+        <input [(ngModel)]="trainer.nome" placeholder="nome" />
+      </label>
+    </div>
+    <h2>My Pokemons</h2>
+    <ul class="pokemons">
+
+      <li *ngFor="let pokemon of trainer.pokemons" (click)="onSelect(pokemon)" [class.selected]="pokemon === pokemon">
+        <!-- <a routerLink="/pokemondetail/{{pokemon.id}}"> -->
+        <span class="badge">{{pokemon.id}}</span> {{pokemon.name}} 
+     
+        <!-- </a> -->
+
+      </li>
+    </ul>
+    
+    <button (click)="goBack()">go back</button>
+    <button  (click)="save()" >save</button> 
+    <button (click)="deleteTrainer()">delete</button>
+    <button (click)="addPokemon()">new Pokemon</button>
+    
+  </div>
+
+  <!-- <div> -->
+  <!-- <app-pokemon-detail [pokemon]="selectedPokemon"></app-pokemon-detail> -->
+  <!-- </div> -->
+
+
+
+</div>
+<div class="pokemonDetail" >
+  <app-pokemon-detail [pokemon]="pokemon"></app-pokemon-detail>
+</div>
+</div>

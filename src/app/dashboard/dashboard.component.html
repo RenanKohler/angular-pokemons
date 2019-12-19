@@ -1,0 +1,9 @@
+<h3>Top Trainers</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let trainer of trainers" class="col-1-4"
+      routerLink="/detail/{{trainer.id}}">
+    <div class="module trainer">
+      <h4>{{trainer.nome}}</h4>
+    </div>
+  </a>
+</div>

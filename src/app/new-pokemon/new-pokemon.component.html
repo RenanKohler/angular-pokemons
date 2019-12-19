@@ -1,0 +1,20 @@
+<h2>Select your Pokemon</h2>
+<h2>Pokemons</h2>
+<div class="flex-row">
+
+  <button  (click)="previousPage()">Previous</button>
+ 
+  <button (click)="nextPage()">Next</button>
+</div>
+<ul class="wrapper">
+
+
+  <li *ngFor="let pokemon of pokemonList" (click)="onSelect(pokemon)" [class.selected]="pokemon === pokemon">
+    <div class="item">
+      <!-- <a id="pokemonDetail" routerLink="/pokemondetail/{{pokemon.id}}"> -->
+        <span class="notify-badge">{{pokemon.id}}<img src="{{pokemon.sprite}}" alt="" width="64" height="64"></span>
+        <!-- <p>{{pokemon.id}}</p> -->
+        <p>{{pokemon.name}}</p>
+        <!-- <span class="icon"  >{{pokemon.id}}</span> {{pokemon.name}}  -->
+      <!-- </a> -->
+    </div>

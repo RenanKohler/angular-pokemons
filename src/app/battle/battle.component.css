@@ -1,0 +1,18 @@
+.battle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top:100px;
+
+}
+.battle .item {
+border-radius: 4px;
+border:1;
+
+}
+.battle p {
+
+   padding-top: 100px;
+    font-weight:bold ;
+
+}

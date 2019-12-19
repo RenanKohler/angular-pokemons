@@ -1,0 +1,39 @@
+<h2>My Trainers</h2>
+<ul class="trainers">
+  <li *ngFor="let trainer of trainers">
+    <a routerLink="/detail/{{trainer.id}}">
+      <span class="badge">{{trainer.id}}</span> {{trainer.nome}}
+    </a>
+  </li>
+</ul>
+<button (click)=newTrainer()>New Trainer</button>
+
+<!-- <h1>{{trainer.nome | uppercase}}</h1>
+<div>
+    <h2><span>id: </span>{{trainer.id}}</h2>
+</div>
+<div>
+    <h2><span>nome: </span>{{trainer.nome}}</h2>
+</div>
+<div>
+    <label> nome:
+        <input [(ngModel)]="trainer.nome" placeholder="nome">
+    </label>
+</div>
+ -->
+<!-- <div class="row">
+    <div class="column">
+        <h1>My Trainers</h1>
+        <ul class="trainers">
+            <li *ngFor="let trainer of trainers">
+                <a routerLink="/detail/{{trainer.id}}">
+                    <span class="badge">{{trainer.id}}</span> {{trainer.nome}}
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="column">
+        <app-trainer-detail [trainer]="selectedHero"></app-trainer-detail>
+    </div>
+</div> -->

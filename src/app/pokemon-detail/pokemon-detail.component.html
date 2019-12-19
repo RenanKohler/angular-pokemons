@@ -1,0 +1,10 @@
+<div *ngIf="pokemon">
+  <div class="pokemon">
+    <h2>{{pokemon.name | uppercase}} Details</h2>
+    <div><span>id:</span>{{pokemon.id}}</div>
+    <div><h3>experience:</h3>{{pokemon.base_experience}}</div>
+    <div>
+      <img src="{{pokemon.sprite}}">
+    </div>
+  </div>
+</div>
