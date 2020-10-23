@@ -129,3 +129,26 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
     );
   }
 }
+  
+ ******************************************************************************************************************************************************************************* 
+  
+  List<int> selectedList = [];
+List<Widget> mList; //you can't add equal
+createMenuWidget(Course courses) {
+  for (int b = 0; b < courses.length; b++) {
+    Map cmap = courses[b];
+    mList.add(CheckboxListTile(
+      onChanged: (bool value){
+        setState(() {
+          if(value){
+            selectedList.add(cmap[course_id]);
+          }else{
+            selectedList.remove(cmap[course_id]);
+          }
+        });
+      },
+      value: selectedList.contains(cmap[course_id]),
+      title: new Text(cmap[course_name]),
+    ));
+  }
+}
